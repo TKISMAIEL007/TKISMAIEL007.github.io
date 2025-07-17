@@ -31,15 +31,20 @@
             </div>
         </section>
 
-        <section class="subscribe subtle-subscribe">
-        <div class="container">
-            <p class="subscribe-intro">Enjoying the read? Get new posts in your inbox.</p>
-            <form action="https://app.convertkit.com/forms/8323029/subscriptions" method="post">
-            <input type="email" name="email" placeholder="Your email address" required>
+        <div id="form-container">
+        <form id="subscribe-form" action="https://app.convertkit.com/forms/8323029/subscriptions" method="post" novalidate>
+            <label for="email" class="visually-hidden">Email address</label>
+            <input type="email" id="email" name="email" placeholder="Your email address" required aria-describedby="emailHelp">
+            <span id="emailHelp" class="error-message"></span>
             <button type="submit">Subscribe</button>
-            </form>
+        </form>
         </div>
-        </section>
+
+        <div id="thank-you-message" class="thank-you hidden">
+        <p>🎉 You're in! Check your inbox for updates — and welcome to the journey.</p>
+        </div>
+
+
 
 
 
@@ -97,5 +102,55 @@
                 <p> 2025 Travis Talks Life. All rights reserved.</p>
             </div>
         </footer>
+            <script>
+            const form = document.getElementById('subscribe-form');
+            const emailInput = document.getElementById('email');
+            const errorMessage = document.getElementById('emailHelp');
+            const thankYou = document.getElementById('thank-you-message');
+            const formContainer = document.getElementById('form-container');
+
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                // Simple validation
+                if (!emailInput.validity.valid) {
+                errorMessage.textContent = "Please enter a valid email address.";
+                errorMessage.style.display = "block";
+                emailInput.focus();
+                return;
+                }
+
+                errorMessage.textContent = "";
+                errorMessage.style.display = "none";
+
+                // Prepare form data
+                const formData = new FormData(form);
+
+                // Send via Fetch to ConvertKit
+                fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+                })
+                .then(response => {
+                if (response.ok) {
+                    formContainer.classList.add('hidden');
+                    thankYou.classList.remove('hidden');
+                } else {
+                    errorMessage.textContent = "Something went wrong. Please try again later.";
+                    errorMessage.style.display = "block";
+                }
+                })
+                .catch(error => {
+                console.error('Error:', error);
+                errorMessage.textContent = "Submission failed. Please try again.";
+                errorMessage.style.display = "block";
+                });
+            });
+            </script>
+   
+
     </body>
 </html>

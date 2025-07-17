@@ -275,3 +275,63 @@ footer {
 .subtle-subscribe button:hover {
   background-color: #555;
 }
+
+@media (max-width: 600px) {
+  .subtle-subscribe form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .subtle-subscribe input[type="email"] {
+    width: 90%;
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+  }
+
+  .subtle-subscribe button {
+    width: 90%;
+    font-size: 1rem;
+  }
+}
+
+/* Error styling */
+.error-message {
+  color: #d9534f;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+  display: none;
+}
+
+input:invalid {
+  border-color: #d9534f;
+}
+
+input:valid {
+  border-color: #28a745;
+}
+
+/* Utility class to visually hide labels */
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+.thank-you {
+  text-align: center;
+  margin-top: 1rem;
+  padding: 1.2rem;
+  background-color: #e6ffe6;
+  color: #2e7d32;
+  border: 1px solid #b2fab4;
+  border-radius: 6px;
+  font-size: 1rem;
+}
