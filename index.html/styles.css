@@ -335,3 +335,22 @@ input:valid {
   border-radius: 6px;
   font-size: 1rem;
 }
+
+.subtle-subscribe .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.subtle-subscribe #form-container,
+.subtle-subscribe #thank-you-message {
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+}
+
+.thank-you p {
+  margin: 0;
+  font-weight: normal;
+  line-height: 1.5;
+}
