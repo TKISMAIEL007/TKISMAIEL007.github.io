@@ -354,3 +354,19 @@ input:valid {
   font-weight: normal;
   line-height: 1.5;
 }
+
+.subtle-subscribe .subscribe-message {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.subtle-subscribe .subscribe-message h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.subtle-subscribe .subscribe-message p {
+  font-size: 1rem;
+  color: #444;
+  margin: 0;
+}
