@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const blogContainer = document.getElementById("blog-container");
 
-  fetch('blogPosts.json')
+  displayPosts(blogPosts);
     .then((response) => response.json())
     .then((posts) => {
       posts.forEach((post) => {
