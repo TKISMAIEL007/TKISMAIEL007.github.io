@@ -19,8 +19,15 @@ body {
 
 .site-logo img {
   height: 120px; /* Adjust as needed */
-  width: auto;
+  width: 100%;
   display: block;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .site-logo img {
+    height: 30px;       /* Slightly smaller on small screens */
+  }
 }
 /* Header */
 header {
