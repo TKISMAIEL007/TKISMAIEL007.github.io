@@ -370,3 +370,85 @@ input:valid {
   color: #444;
   margin: 0;
 }
+
+/* Subscribe Section Styling */
+.subtle-subscribe {
+    background-color: #f9f9f9;
+    padding: 4rem 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+}
+
+.subscribe-message h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: #222;
+}
+
+.subscribe-message p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    color: #555;
+}
+
+/* Form Container */
+#subscribe-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Email Input */
+#subscribe-form input[type="email"] {
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'Inter', sans-serif;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+#subscribe-form input[type="email"]::placeholder {
+    color: #999;
+}
+
+/* Subscribe Button */
+#subscribe-form button {
+    background-color: #222;
+    color: #fff;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Inter', sans-serif;
+}
+
+#subscribe-form button:hover {
+    background-color: #444;
+}
+
+/* Thank You Message */
+.thank-you {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: #2e7d32;
+    margin-top: 2rem;
+}
+
+/* Error Message */
+.error-message {
+    color: #d32f2f;
+    font-size: 0.9rem;
+    display: none;
+}
