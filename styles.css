@@ -17,14 +17,19 @@ body {
     margin: auto;
 }
 
-/* Header */
+.site-logo img {
+  height: 40px; /* Adjust as needed */
+  width: auto;
+  display: block;
+}
+/* Header 
 header {
     background-color: #222;
     color: #fff;
     padding: 1rem 0;
     margin-bottom: 2rem;
 }
-
+*/
 header .logo {
     font-size: 1.5rem; /*changes main header font*/
     margin-bottom: 0.5rem;
