@@ -23,6 +23,14 @@ body {
   display: block;
 }
 
+.logo {
+  width: 60px; /* Adjust as needed */
+  height: 60px; /* Ensure width and height are equal */
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
 /* Mobile responsiveness */
 @media (max-width: 600px) {
   .site-logo img {
