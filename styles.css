@@ -502,36 +502,39 @@ form input[type="email"] {
 
 .contact-section {
   max-width: 600px;
-  margin: 60px auto;
-  padding: 0 20px;
+  margin: 100px auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   text-align: center;
 }
 
 .contact-section h1 {
   font-size: 2rem;
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
+  color: #333;
 }
 
 .contact-section p {
+  color: #555;
   font-size: 1.1rem;
-  color: #444;
-  margin-bottom: 30px;
+  margin-bottom: 1rem;
 }
 
-.contact-section a.email-link {
+.email-link {
   display: inline-block;
-  font-size: 1.1rem;
-  color: #0066cc;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #0e1111;
+  color: #fff;
   text-decoration: none;
-  border: 1px solid #0066cc;
-  padding: 10px 20px;
-  border-radius: 6px;
-  transition: background-color 0.3s;
+  border-radius: 4px;
+  transition: background 0.3s ease;
 }
 
-.contact-section a.email-link:hover {
-  background-color: #0066cc;
-  color: white;
+.email-link:hover {
+  background-color: #333;
 }
 
 
