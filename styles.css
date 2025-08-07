@@ -20,7 +20,8 @@ body {
 .site-logo img {
   height: 140px; /* Adjust as needed */
   width: auto;
-  display: cover;
+  display: flex;
+  align-items: center;
 }
 
 .logo {
