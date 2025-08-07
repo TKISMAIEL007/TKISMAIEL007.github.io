@@ -20,7 +20,7 @@ body {
 .site-logo img {
   height: 140px; /* Adjust as needed */
   width: auto;
-  display: block;
+  display: inline-block;
 }
 
 .logo {
