@@ -26,8 +26,8 @@ body {
 }
 
 .logo {
-  width: 60px; /* Adjust as needed */
-  height: 60px; /* Ensure width and height are equal */
+  width: 80px; /* Adjust as needed */
+  height: 80px; /* Ensure width and height are equal */
   border-radius: 50%;
   object-fit: cover;
 }
@@ -56,7 +56,7 @@ nav ul {
     list-style: none; /*puts menu options in horizontal format*/
     display: flex;
     gap: 1rem;
-    justify-content: left;
+    justify-content: right;
     flex-wrap: wrap;
 }
 
