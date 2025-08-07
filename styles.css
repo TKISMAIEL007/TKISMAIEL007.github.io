@@ -20,12 +20,12 @@ body {
 .site-logo img {
   height: 140px; /* Adjust as needed */
   width: auto;
-  display: block;
+  display: cover;
 }
 
 .logo {
-  width: 120px; /* Adjust as needed */
-  height: 120px; /* Ensure width and height are equal */
+  width: 60px; /* Adjust as needed */
+  height: 60px; /* Ensure width and height are equal */
   border-radius: 50%;
   object-fit: cover;
 }
