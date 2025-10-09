@@ -124,5 +124,3 @@ LinkedIn | Website
  
 ---
 
-✅ Once you’ve added both of these, your **Step 1: Folder Structure** is complete.  
-👉 Do you want me to walk you through moving your logo images into `/images/og/` next, or would you prefer to leave them in root for now and fix paths later?
