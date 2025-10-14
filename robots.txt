@@ -1,0 +1,6 @@
+# Travis Talks Life – Robots File
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.travistalkslife.com/sitemap.xml
