@@ -1,25 +1,57 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const blogContainer = document.getElementById("blog-container");
+// app.js
+// Travis Talks Life – Dynamic Blog Rendering (JSON version)
 
-  displayPosts(blogPosts);
-    .then((response) => response.json())
-    .then((posts) => {
-      posts.forEach((post) => {
-        const postDiv = document.createElement("div");
-        postDiv.classList.add("blog-post");
+fetch('blogPosts.json')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    return response.json();
+  })
+  .then(data => {
+    const posts = data.posts;
+    const container = document.getElementById('blog-container');
 
-        postDiv.innerHTML = `
-          <h2>${post.title}</h2>
-          <p class="post-date">${new Date(post.date).toLocaleDateString()}</p>
-          <p>${post.content.replace(/\n/g, "<br>")}</p>
-          <hr>
-        `;
+    if (!posts || posts.length === 0) {
+      container.innerHTML = '<p>No blog posts found.</p>';
+      return;
+    }
 
-        blogContainer.appendChild(postDiv);
+    // Clear any existing content
+    container.innerHTML = '';
+
+    // Sort posts by date (newest first)
+    posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+    // Render each post
+    posts.forEach(post => {
+      const article = document.createElement('article');
+      article.classList.add('blog-post');
+
+      // Convert ISO date to display format
+      const dateObj = new Date(post.date + 'T00:00:00Z');
+      const formattedDate = dateObj.toLocaleDateString('en-ZA', {
+        weekday: 'short',
+        day: '2-digit',
+        month: 'short',
+        year: 'numeric'
       });
-    })
-    .catch((error) => {
-      console.error("Error loading blog posts:", error);
-      blogContainer.innerHTML = "<p>Failed to load blog posts.</p>";
+
+      // Inject post content
+      article.innerHTML = `
+        <h2>${post.title}</h2>
+        <p class="post-meta">Published ${formattedDate}</p>
+        ${post.html || ''}
+      `;
+
+      container.appendChild(article);
     });
-});
+  })
+  .catch(error => {
+    console.error('Error loading blog posts:', error);
+    const container = document.getElementById('blog-container');
+    container.innerHTML = `
+      <p>Sorry, there was an error loading the blog posts.</p>
+      <p><em>${error.message}</em></p>
+    `;
+  });

@@ -178,6 +178,7 @@
 
         <!--Blog Section: All blog posts rendered directly here -->
         <main class="container blog-feed">
+            <!-- Static Fallback Post (for SEO + no-JS users) -->
             <!-- Blog Post #16 -->
             <article id="post-consistency-edge" class="blog-post">
                 <h2 class="post-title">The Consistency Edge</h2>
@@ -214,6 +215,11 @@
                 Your edge isn’t missing.<br>
                 You’re building it.</p>
             </article>
+            
+            <div id="blog-container"></div>
+
+            <template id="disabled-section">
+                       
               
             <!-- Blog Post #15 -->
             <article id="post-closure-to-clarity" class="blog-post">
@@ -821,7 +827,7 @@
                 <p>Consider this. What if you attempted everything you ever dreamed of without attaching a certain result to it. What if you fail while colouring outside the lines as well as inside.</p>
                 <p>What if you dare to break everything down then try and glue it back together and in the process stumble upon perfection. Isn’t that the point of living.</p>
             </article>
-            <div id="blog-container"></div>
+            </template>
 
           
         </main>
