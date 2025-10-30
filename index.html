@@ -178,7 +178,9 @@
 
         <!--Blog Section: All blog posts rendered directly here -->
         <main class="container blog-feed">
-            <!-- Static Fallback Post (for SEO + no-JS users) -->
+            <div id="blog-container"></div>
+             <!-- Static Fallback Post (for SEO + no-JS users) -->
+            <noscript>
             <!-- Blog Post #16 -->
             <article id="post-consistency-edge" class="blog-post">
                 <h2 class="post-title">The Consistency Edge</h2>
@@ -215,11 +217,8 @@
                 Your edge isn’t missing.<br>
                 You’re building it.</p>
             </article>
-            
-            <div id="blog-container"></div>
-
-            <template id="disabled-section">
-                       
+            </noscript>
+            <template id="disabled-section">        
             <!-- Blog Post #15 -->
             <article id="post-closure-to-clarity" class="blog-post">
                 <h2>From Closure to Clarity</h2>
